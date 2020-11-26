@@ -1,0 +1,263 @@
+body,
+h1 {
+    margin: 0;
+}
+
+.header-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 0 5%;
+    height: 40px;
+}
+
+.header-line h1 {
+    font-weight: normal;
+}
+
+.search-field {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.search-input,
+.search-icon {
+    background-color: #F6F7FD;
+}
+
+.search-icon {
+    width: 15%;
+    border-radius: 0 10px 10px 0;
+}
+
+.search-input {
+    border: none;
+    border-radius: 10px 0 0 10px;
+    padding: 4px 10px;
+}
+
+.search-icon img {
+    width: 20%;
+    height: 80%;
+    padding: 2px 10px;
+    float: right;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    margin: auto;
+    padding: 15px;
+}
+
+.side-content {
+    max-width: 18rem;
+    margin-right: 10px;
+    /* padding: 1rem; */
+    width: 30%;
+    /* height: 40%; */
+}
+
+.personal-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* padding: 1rem; */
+    padding: 10px;
+    background-color: #FFFFFF;
+}
+
+.personal-info img {
+    /* width: 40%; */
+    width: 5.25rem;
+    height: 5.25rem;
+    border-radius: 50%;
+}
+
+.cycle-img {
+    border-radius: 50%;
+}
+
+.profile-info {
+    /* padding: 0 2rem; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    height: 3.75rem;
+    background-color: #F6F7FD;
+    font-weight: bold;
+}
+
+.name {
+    padding-top: 10px;
+}
+
+.info {
+    display: flex;
+    flex-direction: row;
+}
+
+.info-cell {
+    display: flex;
+    flex-direction: column;
+    padding: 0 5px;
+}
+
+.info span:first-child {
+    font-size: 0.75rem;
+    color: #A9ABB5;
+}
+
+.info span:last-child {
+    font-size: 1.125rem;
+    color: #72C8DD;
+}
+
+.logout-btn {
+    /* margin: auto; */
+    border: 2px solid #72C8DD;
+    color: #72C8DD;
+    border-radius: 15px;
+    padding: 5px 10px;
+    background-color: #F6F7FD;
+    font-weight: bold;
+}
+
+.logout-btn:hover {
+    cursor: pointer;
+}
+
+.wall {
+    max-width: 55rem;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.post-profile-icon {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+}
+
+.wall-header {
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F4FCFD;
+    padding: 0 1rem;
+}
+
+.post-field {
+    display: flex;
+    justify-content: flex-end;
+    align-items: stretch;
+    width: 90%;
+    height: 2rem;
+    padding-left: 0.5rem;
+}
+
+.comment-icon {
+    max-width: 2.5rem;
+    width: 10%;
+    background-color: #FFFFFF;
+    border-radius: 0 25px 25px 0;
+    display: flex;
+    align-items: center;
+}
+
+.comment-icon img {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 0;
+}
+
+.post-field input {
+    width: 90%;
+    border: none;
+    border-radius: 25px 0 0 25px;
+}
+
+.post-field input::placeholder {
+    padding-left: 5px;
+    color: #72C8DD;
+}
+
+article {
+    min-width: 7rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #FFFFFF;
+    padding: 1rem;
+    border-top: 1px solid #F3F3F3;
+    font-size: 0.875rem;
+}
+
+article>img:first-child {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+}
+
+.post-content img {
+    width: 1rem;
+    height: 1rem;
+    background-color: #FFFFFF;
+}
+
+.post-content {
+    width: 90%;
+    padding-left: 0.5rem;
+}
+
+.post-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.post-writer span:first-child {
+    font-weight: bold;
+}
+
+.post-writer span:last-child {
+    color: #9A9CA5;
+}
+
+.post-reactions {
+    display: flex;
+    flex-direction: row;
+}
+
+.post-reactions div {
+    margin-right: 1rem;
+}
+
+@media (max-width: 890px) {
+    .header-line {
+        justify-content: center;
+    }
+    .search-icon img {
+        width: 30%;
+    }
+    .search-field {
+        width: 60%;
+    }
+    .content {
+        flex-direction: column;
+        width: 90%;
+    }
+    .wall,
+    .side-content {
+        margin: 0 auto;
+        max-width: none;
+        width: 90%;
+    }
+}

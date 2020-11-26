@@ -1,0 +1,9 @@
+.account {
+    text-align: center;
+    text-decoration: none;
+}
+
+a.account,
+.account:visited {
+    color: #7480E2;
+}
