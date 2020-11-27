@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/page.css">
     <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/v4-shims.css">
     <title>Flutter</title>
 </head>
 
@@ -15,7 +17,9 @@
         <div class="search-field">
             <input placeholder="Search" class="search-input" />
             <div class="search-icon">
-                <img src="./images/search-icon.png" alt="Search Icon" />
+                <span>
+                    <i class="fa fa-search"></i>
+                </span>
             </div>
         </div>
     </header>
@@ -23,12 +27,8 @@
     <div class="content">
         <aside class="side-content">
             <div class="personal-info">
-
-                <img src="./images/profile-icon.png" alt="Profile Picture" />
-
-                <!-- <div class="names"> -->
+                <img src="./images/profile-icon.jpg" alt="Profile Picture" />
                 <span class="name">Martin Hristov</span>
-                <!-- </div> -->
             </div>
             <div class="profile-info">
                 <div class="info">
@@ -49,25 +49,28 @@
 
         <section class="wall">
             <header class="wall-header">
-                <img src="./images/profile-icon.png" alt="Profile Picture" class="post-profile-icon" />
 
+                <img src="./images/profile-icon.jpg" alt="Profile Picture" class="post-profile-icon" />
                 <div class="post-field">
                     <input type="text" placeholder="Say something" />
                     <div class="comment-icon">
-                        <img src="./images/comment-icon.png" alt="Search Icon" />
+                        <i class="far fa-comment-alt"></i>
                     </div>
                 </div>
+
             </header>
 
             <article>
-                <img src="./images/profile-icon.png" alt="Profile Picture" />
+                <img src="./images/profile-icon.jpg" alt="Profile Picture" />
                 <div class="post-content">
                     <div class="post-header">
                         <div class="post-writer">
                             <span>Ivan Ivanov</span>
                             <span> &#8226; 0 seconds ago</span>
                         </div>
-                        <img src="./images/remove-icon.png" alt="Remove icon" />
+                        <span>
+                            <i class="fa fa-times"></i>
+                        </span>
                     </div>
 
                     <div class="main">
@@ -78,12 +81,17 @@
 
                     <div class="post-reactions">
                         <div class="likes">
-                            <img src="./images/like-icon.png" alt="Likes" />
+                            <span>
+                                <i class="far fa-thumbs-up"></i>
+                            
+                            </span>
                             <span>5</span>
                         </div>
 
                         <div class="dislikes">
-                            <img src="./images/dislike-icon.png" alt="Dislikes" />
+                            <span>
+                                <i class="far fa-thumbs-down"></i>
+                            </span>
                             <span>3</span>
                         </div>
                     </div>
@@ -92,14 +100,16 @@
             </article>
 
             <article>
-                <img src="./images/profile-icon.png" alt="Profile Picture" />
+                <img src="./images/profile-icon.jpg" alt="Profile Picture" />
                 <div class="post-content">
                     <div class="post-header">
                         <div class="post-writer">
                             <span>Matrin</span>
                             <span> &#8226; Last month</span>
                         </div>
-                        <img src="./images/remove-icon.png" alt="Remove icon" />
+                        <span>
+                            <i class="fa fa-times"></i>
+                        </span>
                     </div>
 
                     <div class="main">
@@ -110,12 +120,16 @@
 
                     <div class="post-reactions">
                         <div class="likes">
-                            <img src="./images/like-icon.png" alt="Likes" />
+                            <span>
+                                <i class="far fa-thumbs-up"></i>
+                            </span>
                             <span>3</span>
                         </div>
 
                         <div class="dislikes">
-                            <img src="./images/dislike-icon.png" alt="Dislikes" />
+                            <span>
+                                <i class="far fa-thumbs-down"></i>
+                            </span>
                             <span>0</span>
                         </div>
                     </div>
