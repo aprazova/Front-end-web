@@ -58,7 +58,7 @@ function validateLoginForm(event) {
 }
 
 function validateEmail(email) {
-    return email.length < 5 || !/\./.test(email) || !/@/.test(email);
+    return email.length < 5 || !/@.*\./.test(email) || !/@/.test(email);
 }
 
 function validatePassword(pass) {
