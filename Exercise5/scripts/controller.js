@@ -9,7 +9,7 @@ function validateRegistrationForm(event) {
 
     //Validate username field
     if (username.length == 0) {
-        document.getElementById("errors").innerText = "Username is requиred.";
+        document.getElementById("errors").innerText = "Username is required.";
 
         // Validate email field
     } else if (validateEmail(email)) {
