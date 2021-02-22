@@ -63,7 +63,6 @@
     });
 
     firebase.auth().onAuthStateChanged(user => {
-
         // Update profile posts information
         if (validateUser()) {
             userName.innerText = user.displayName ? user.displayName : "Anonymous";
@@ -98,7 +97,6 @@
 
     tweetsDB.on('child_added', data => {
         // Logic when new tweet is added
-
         if (!hasPosts) {
             hasPosts = true;
             loader.style.display = "none";
@@ -107,7 +105,7 @@
         if (data.val() && data.val().message) {
             hasPosts = true;
 
-            //Append html code of the new post to the current post section
+            // Append html code of the new post to the current post section
             const htmlPost = post(data);
             const divWrapper = document.createElement("div");
             divWrapper.classList.add("post");
@@ -115,13 +113,13 @@
             postContainer.appendChild(divWrapper);
 
             if (data.key) {
-                //Add event listeners for all buttons
+                // Add event listeners for all buttons
                 const postInfo = data.val();
                 const buttons = document.body.querySelectorAll(`[data-id=${data.key}]`);
                 [...buttons].forEach(button => {
                     const postId = button.getAttribute("data-id");
                     if (button.classList.contains("like-btn")) {
-                        //Like post and increment user posts
+                        // Like post and increment user posts
                         button.addEventListener("click", (event) => {
                             tweet.incrementLikes(postId);
                             if (postInfo.userId === userInfo.uid) {
@@ -129,7 +127,7 @@
                             }
                         });
                     } else if (button.classList.contains("dislike-btn")) {
-                        //Dislike post and decrements users posts
+                        // Dislike post and decrement users posts
                         button.addEventListener("click", (event) => {
                             tweet.incrementDislikes(postId);
 
@@ -139,7 +137,7 @@
                         });
 
                     } else if (button.classList.contains("post-close")) {
-                        //Delete post
+                        // Delete post
                         button.addEventListener("click", (event) => {
 
                             // Decrement number of user posts
@@ -166,19 +164,16 @@
 
     tweetsDB.on('child_changed', data => {
         // Like / Dislike logic here
-
         const postButtons = document.body.querySelectorAll(`[data-id=${data.key}]`);
         [...postButtons].forEach(button => {
             const postId = button.getAttribute("data-id");
-            //Update post likes in view
             const parrentEl = button.parentElement;
             if (button.classList.contains("like-btn")) {
+                // Like post
                 const countContainer = parrentEl.getElementsByClassName('post-likes')[0];
                 countContainer.innerText = data.val().likes;
-
-                // Update post lislikes in view
             } else if (button.classList.contains("dislike-btn")) {
-                //Dislike post
+                // Dislike post
                 const countContainer = parrentEl.getElementsByClassName('post-dislikes')[0];
                 countContainer.innerText = data.val().dislikes;
             }
@@ -187,7 +182,7 @@
 
     function validateUser() {
         if (!firebase.auth().currentUser) {
-            // user is not logged in
+            // User is not logged in
             window.location = 'index.html?error=accessDenied';
             return false;
         }
